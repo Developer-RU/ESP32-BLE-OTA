@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05D3C849D50110F86CFF7F4F /* BLEScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C59218378BC05F8A48CD41 /* BLEScanner.swift */; };
+		28AD16E210858B9F9588E91F /* StageTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D9FBCE026EE94523580C35 /* StageTimelineView.swift */; };
+		35ED613640F3116546D2140E /* DFUStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0154880E65017F66F1A238 /* DFUStage.swift */; };
+		371793998A6CAD63F50ABB5A /* BLEDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFEBC350958735EFA3610CD /* BLEDevice.swift */; };
+		628F1206D91BA1ACD8BCA18D /* DFUSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E726156F73940613824E7 /* DFUSessionManager.swift */; };
+		69E4F1AC625E9963FC172659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA82635D2896FF381977E5A4 /* Assets.xcassets */; };
+		6AE5FA01EC82D17EC9124DEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D97529C78FDFD447722A2D /* ContentView.swift */; };
+		7DBE2376AC9DDD07F7D5E8F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25A515382C8E5A93075EB61A /* LaunchScreen.storyboard */; };
+		B0551692644E61290E144D5D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6CE07320552184AC128556 /* SettingsView.swift */; };
+		DBCD5F69E0CF763BB43FC6CA /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C42FA41496B9DF9D92DC9 /* Localization.swift */; };
+		F7363FBFB3E499211CD5D43E /* ESP32_DFUApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99754988074C4F5B87734D7E /* ESP32_DFUApp.swift */; };
+		F86814EF5BD97668077B84C3 /* DevicePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB0BE83A1573B2BABFA25AC /* DevicePickerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		09D97529C78FDFD447722A2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		14C59218378BC05F8A48CD41 /* BLEScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEScanner.swift; sourceTree = "<group>"; };
+		25A515382C8E5A93075EB61A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BFEBC350958735EFA3610CD /* BLEDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEDevice.swift; sourceTree = "<group>"; };
+		6A0154880E65017F66F1A238 /* DFUStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DFUStage.swift; sourceTree = "<group>"; };
+		6B1E726156F73940613824E7 /* DFUSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DFUSessionManager.swift; sourceTree = "<group>"; };
+		6CB0BE83A1573B2BABFA25AC /* DevicePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePickerView.swift; sourceTree = "<group>"; };
+		6F6CE07320552184AC128556 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		73D9FBCE026EE94523580C35 /* StageTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageTimelineView.swift; sourceTree = "<group>"; };
+		8A88C20EBEF490F78A6F9AF8 /* ESP32-DFU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ESP32-DFU.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99754988074C4F5B87734D7E /* ESP32_DFUApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESP32_DFUApp.swift; sourceTree = "<group>"; };
+		BF7C42FA41496B9DF9D92DC9 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		D646C2B188D97F679D9EF417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FA82635D2896FF381977E5A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		38DA31E89AFF425D75C4AFCD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				14C59218378BC05F8A48CD41 /* BLEScanner.swift */,
+				6B1E726156F73940613824E7 /* DFUSessionManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4BB945308DA81A53C0867EAC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA82635D2896FF381977E5A4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4D837843F652DEB16494B9EC /* ESP32-DFU */ = {
+			isa = PBXGroup;
+			children = (
+				D646C2B188D97F679D9EF417 /* Info.plist */,
+				25A515382C8E5A93075EB61A /* LaunchScreen.storyboard */,
+				DA8F5FF3562A0BF9F687AA42 /* App */,
+				FDAB32010B7A447CBD1D3F34 /* Models */,
+				4BB945308DA81A53C0867EAC /* Resources */,
+				38DA31E89AFF425D75C4AFCD /* Services */,
+				E8373E97FC80890BD582CDC0 /* Views */,
+			);
+			path = "ESP32-DFU";
+			sourceTree = "<group>";
+		};
+		8918DEF67212C1E920D45641 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A88C20EBEF490F78A6F9AF8 /* ESP32-DFU.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9F25BE6E40B5908E7A38AEE = {
+			isa = PBXGroup;
+			children = (
+				4D837843F652DEB16494B9EC /* ESP32-DFU */,
+				8918DEF67212C1E920D45641 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA8F5FF3562A0BF9F687AA42 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				99754988074C4F5B87734D7E /* ESP32_DFUApp.swift */,
+				BF7C42FA41496B9DF9D92DC9 /* Localization.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E8373E97FC80890BD582CDC0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				09D97529C78FDFD447722A2D /* ContentView.swift */,
+				6CB0BE83A1573B2BABFA25AC /* DevicePickerView.swift */,
+				6F6CE07320552184AC128556 /* SettingsView.swift */,
+				73D9FBCE026EE94523580C35 /* StageTimelineView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FDAB32010B7A447CBD1D3F34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3BFEBC350958735EFA3610CD /* BLEDevice.swift */,
+				6A0154880E65017F66F1A238 /* DFUStage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACB38AFDF004B83516CF6B68 /* ESP32-DFU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4570097C2E8DBD93B8ABD744 /* Build configuration list for PBXNativeTarget "ESP32-DFU" */;
+			buildPhases = (
+				BFF72F3038B8A3B40D2922E7 /* Sources */,
+				CD2492289251EF166963AEA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ESP32-DFU";
+			packageProductDependencies = (
+			);
+			productName = "ESP32-DFU";
+			productReference = 8A88C20EBEF490F78A6F9AF8 /* ESP32-DFU.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03D7C163FEB60FA84662687C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					ACB38AFDF004B83516CF6B68 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BA8CD30F1E56B3B0D7005B08 /* Build configuration list for PBXProject "ESP32-DFU" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = B9F25BE6E40B5908E7A38AEE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8918DEF67212C1E920D45641 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACB38AFDF004B83516CF6B68 /* ESP32-DFU */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD2492289251EF166963AEA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69E4F1AC625E9963FC172659 /* Assets.xcassets in Resources */,
+				7DBE2376AC9DDD07F7D5E8F4 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFF72F3038B8A3B40D2922E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371793998A6CAD63F50ABB5A /* BLEDevice.swift in Sources */,
+				05D3C849D50110F86CFF7F4F /* BLEScanner.swift in Sources */,
+				6AE5FA01EC82D17EC9124DEA /* ContentView.swift in Sources */,
+				628F1206D91BA1ACD8BCA18D /* DFUSessionManager.swift in Sources */,
+				35ED613640F3116546D2140E /* DFUStage.swift in Sources */,
+				F86814EF5BD97668077B84C3 /* DevicePickerView.swift in Sources */,
+				F7363FBFB3E499211CD5D43E /* ESP32_DFUApp.swift in Sources */,
+				DBCD5F69E0CF763BB43FC6CA /* Localization.swift in Sources */,
+				B0551692644E61290E144D5D /* SettingsView.swift in Sources */,
+				28AD16E210858B9F9588E91F /* StageTimelineView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6B29DFDDE2CF4173DA36A797 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGNING_ALLOWED[sdk=iphonesimulator*]" = NO;
+				"CODE_SIGNING_REQUIRED[sdk=iphonesimulator*]" = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VK5PTZ6599;
+				INFOPLIST_FILE = "ESP32-DFU/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pavelmasyukov.esp32dfu;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD2395E456C7421EB830982F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D276D1CDCE66CD83720F50F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGNING_ALLOWED[sdk=iphonesimulator*]" = NO;
+				"CODE_SIGNING_REQUIRED[sdk=iphonesimulator*]" = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VK5PTZ6599;
+				INFOPLIST_FILE = "ESP32-DFU/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pavelmasyukov.esp32dfu;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FFE473F4CAA0483287A03149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4570097C2E8DBD93B8ABD744 /* Build configuration list for PBXNativeTarget "ESP32-DFU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B29DFDDE2CF4173DA36A797 /* Debug */,
+				D276D1CDCE66CD83720F50F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BA8CD30F1E56B3B0D7005B08 /* Build configuration list for PBXProject "ESP32-DFU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD2395E456C7421EB830982F /* Debug */,
+				FFE473F4CAA0483287A03149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03D7C163FEB60FA84662687C /* Project object */;
+}

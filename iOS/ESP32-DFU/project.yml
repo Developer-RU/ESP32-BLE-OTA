@@ -1,0 +1,27 @@
+name: ESP32-DFU
+options:
+  bundleIdPrefix: com.pavelmasyukov
+  deploymentTarget:
+    iOS: "16.0"
+settings:
+  base:
+    SWIFT_VERSION: 5.0
+    CODE_SIGN_STYLE: Automatic
+targets:
+  ESP32-DFU:
+    type: application
+    platform: iOS
+    sources:
+      - path: ESP32-DFU
+        excludes:
+          - "**/*.md"
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.pavelmasyukov.esp32dfu
+      INFOPLIST_FILE: ESP32-DFU/Info.plist
+      ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+      ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+      CODE_SIGN_STYLE: Automatic
+      CODE_SIGNING_ALLOWED[sdk=iphonesimulator*]: NO
+      CODE_SIGNING_REQUIRED[sdk=iphonesimulator*]: NO
+    scheme:
+      testTargets: []
