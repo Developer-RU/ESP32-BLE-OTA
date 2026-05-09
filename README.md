@@ -1,5 +1,10 @@
 # ESP32 BLE Legacy DFU Template
 
+[![PlatformIO Build](https://github.com/Developer-RU/ESP32-BLE-OTA/actions/workflows/build.yml/badge.svg)](https://github.com/Developer-RU/ESP32-BLE-OTA/actions/workflows/build.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Platform: ESP32](https://img.shields.io/badge/Platform-ESP32-green.svg)](https://docs.platformio.org/en/latest/boards/espressif32/esp32dev.html)
+[![iOS App](https://img.shields.io/badge/iOS_App-GitHub-black?logo=github)](https://github.com/Developer-RU/ESP32-DFU-iOS)
+
 Production-ready ESP32 firmware template for OTA updates over **Bluetooth Low Energy (BLE)** using the **Nordic Legacy DFU profile**.
 
 This repository focuses on the ESP32 firmware side.
@@ -135,4 +140,4 @@ Keep this repository focused on firmware template quality and embedded protocol 
 
 ## License
 
-Add your preferred license before publishing (for example, MIT or Apache-2.0).
+This project is licensed under the [MIT License](LICENSE).
