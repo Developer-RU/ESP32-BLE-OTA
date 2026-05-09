@@ -1,54 +1,53 @@
-# REAL DFU Test Plan (ESP32)
+# Real DFU Test Plan (ESP32 + iOS)
 
-Этот чеклист нужен для реальной проверки прошивки вашего ESP32 через iOS-приложение ESP32-DFU.
+## Goal
 
-## 1. Подготовка
+Validate stable and repeatable BLE DFU updates from iOS app to ESP32 firmware target.
 
-1. Собрать новую прошивку устройства:
-   - `pio run`
-2. Залить по USB базовую прошивку с DFU-сервисом:
-   - `pio run -t upload`
-3. Открыть UART-лог:
-   - `pio device monitor -b 115200`
-4. Собрать и запустить iOS-приложение на iPhone (не симулятор).
-5. Выбрать подписанную Team в Xcode для target `ESP32-DFU`.
+## Preconditions
 
-## 2. Базовый успешный сценарий
+- ESP32 is flashed with BLE DFU firmware.
+- iOS app has Bluetooth permissions granted.
+- Known-good firmware binary is available.
+- Device battery and phone battery are above safe thresholds.
 
-1. В приложении нажать `Устройства` и выбрать ESP32-DFU.
-2. Выбрать файл `.pio/build/esp32dev/firmware.bin`.
-3. Нажать `Старт DFU`.
-4. Убедиться, что стадии доходят до `Активация и перезапуск` и затем `Обновление завершено`.
-5. После перезагрузки ESP32 снова появляется в списке и реклама DFU активна.
+## Test Cases
 
-## 3. Проверка CRC/size валидации
+1. Happy path update
+- Discover device
+- Select valid firmware
+- Complete update to 100%
+- Verify reboot and new firmware behavior
 
-1. Создать поврежденную копию файла прошивки (изменить 1 байт в конце).
-2. Повторить запуск DFU с поврежденным файлом.
-3. Ожидаемый результат:
-   - DFU останавливается на стадии `Проверка пакета`.
-   - Приложение получает ошибку ответа Validate.
-   - ESP32 не переключает OTA слот (остается на рабочей прошивке).
+2. Wrong file handling
+- Select invalid/non-firmware file
+- Verify graceful error handling and no crash
 
-## 4. Проверка retry при обрыве BLE
+3. Interrupted transfer
+- Move out of BLE range during transfer
+- Verify timeout/failure handling and ability to retry
 
-1. Запустить DFU.
-2. Во время `Загрузка firmware` отойти с телефоном от устройства или временно выключить BLE на iPhone.
-3. Ожидаемый результат:
-   - Приложение показывает сообщение `Обрыв BLE. Повтор X/3`.
-   - Выполняется до 3 попыток переподключения.
+4. Cancellation
+- Start update and cancel mid-transfer
+- Verify progress reset and consistent state recovery
 
-## 5. Проверка фонового восстановления
+5. Reconnect and retry
+- After failure, reconnect and rerun update
+- Verify successful completion
 
-1. Запустить DFU и свернуть приложение.
-2. Через 10-20 секунд вернуть приложение на экран.
-3. Ожидаемый результат:
-   - Центральный менеджер восстанавливает состояние.
-   - DFU продолжается, если BLE-сессия не была потеряна.
+6. Multiple sequential updates
+- Run several updates in a row
+- Verify no memory growth symptoms and stable behavior
 
-## 6. Если обновление не стартует
+## Pass Criteria
 
-1. Проверить, что ESP32 рекламирует сервис UUID `00001530-1212-EFDE-1523-785FEABCD123`.
-2. Проверить, что выбран именно `firmware.bin` от текущей сборки.
-3. Перезапустить BLE на iPhone.
-4. Перезапустить ESP32 и повторить тест.
+- No app crashes
+- Deterministic stage transitions
+- Correct success/failure reporting
+- Firmware boots after successful update
+
+## Logging Recommendations
+
+- Capture serial logs from ESP32
+- Capture iOS debug logs for BLE and DFU states
+- Keep timestamps for correlation of events

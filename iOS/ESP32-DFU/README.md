@@ -1,31 +1,31 @@
-# ESP32-DFU iOS App
+# ESP32-DFU iOS Client
 
-SwiftUI-приложение для iPhone под BLE DFU обновление ESP32 (Legacy DFU профиль).
+SwiftUI iPhone application for BLE DFU firmware updates of ESP32 devices using the Legacy DFU profile.
 
-## Что реализовано
+## Implemented
 
-- Выбор BLE-устройства
-- Выбор файла прошивки (`firmware.bin`)
-- Индикатор прогресса
-- Таймлайн стадий прошивки:
-  - Поиск устройства
-  - Подключение
-  - Загрузка загрузчика DFU
-  - Инициализация пакета
-  - Загрузка firmware
-  - Проверка пакета
-  - Активация и перезапуск
-- Экран настроек (кнопка сверху справа)
-- Современный UI: градиентный фон, карточки, SF Symbols
+- BLE device discovery and selection
+- Firmware file selection (binary image)
+- DFU progress tracking
+- Stage timeline for the update pipeline
+- Cancellation and retry behavior
+- Localization and settings screen
 
-## Структура
+## Main Stack
 
-- `ESP32-DFU/App` — точка входа приложения
-- `ESP32-DFU/Models` — модели устройства и этапов DFU
-- `ESP32-DFU/Services` — BLE сканер и менеджер DFU с состояниями
-- `ESP32-DFU/Views` — UI-экраны
-- `ESP32-DFU/Resources` — ассеты и `Info.plist`
+- SwiftUI (UI)
+- CoreBluetooth (BLE transport)
+- Background restoration for more resilient sessions
 
-## Важно
+## Typical Flow
 
-Текущая версия содержит полный UX-флоу и состояние DFU. Транспортный слой можно подключить в `DFUSessionManager` в месте, отмеченном комментарием, для фактической отправки пакетов в характеристики Legacy DFU ESP32.
+1. Scan and select target ESP32 DFU device.
+2. Select firmware binary file.
+3. Start DFU session.
+4. Wait for transfer, validation, and activation.
+5. Observe completion or error diagnostics.
+
+## Notes
+
+This app is intended as a companion client for the firmware project in the repository root.
+For production releases, publish mobile client and firmware as separate versioned artifacts.

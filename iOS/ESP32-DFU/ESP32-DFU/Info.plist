@@ -34,9 +34,9 @@
         <string>bluetooth-central</string>
     </array>
     <key>NSBluetoothAlwaysUsageDescription</key>
-    <string>Приложение использует Bluetooth для поиска ESP32 и передачи DFU-прошивки.</string>
+    <string>The app uses Bluetooth to discover ESP32 devices and transfer DFU firmware.</string>
     <key>NSBluetoothPeripheralUsageDescription</key>
-    <string>Bluetooth нужен для подключения к ESP32 и обновления прошивки.</string>
+    <string>Bluetooth is required to connect to ESP32 and perform firmware updates.</string>
     <key>UILaunchStoryboardName</key>
     <string>LaunchScreen</string>
     <key>UISupportedInterfaceOrientations</key>
